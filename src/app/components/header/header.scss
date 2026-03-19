@@ -1,0 +1,281 @@
+// Variáveis
+$primary-color: #408A71;
+$secondary-color: #285A48;
+$light-bg: #B0E4CC;
+$text-dark: #091413;
+$text-light: #666;
+$border-radius: 12px;
+$transition: all 0.3s ease;
+$white: #ffffff;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Header
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
+  transition: $transition;
+
+  &.scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba($white, 0.98);
+    backdrop-filter: blur(10px);
+  }
+}
+
+// Navbar
+.navbar {
+  padding: 1rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// Navbar Content
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+// Brand/Logo
+.navbar-brand {
+  flex-shrink: 0;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: $transition;
+
+    .logo-icon {
+      font-size: 28px;
+      font-weight: bold;
+      background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: $text-dark;
+      transition: $transition;
+    }
+
+    &:hover {
+      opacity: 0.8;
+
+      .logo-text {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// Nav Menu Desktop
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+
+  li {
+    position: relative;
+
+    a {
+      text-decoration: none;
+      color: $text-dark;
+      font-weight: 500;
+      transition: $transition;
+      padding: 8px 0;
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      &.active {
+        color: $primary-color;
+        font-weight: 600;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          left: 0;
+          right: 0;
+          height: 3px;
+          background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+}
+
+// Hamburger Menu
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  gap: 5px;
+
+  span {
+    width: 25px;
+    height: 3px;
+    background-color: $text-dark;
+    border-radius: 2px;
+    transition: $transition;
+  }
+
+  &.active {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(10px, 10px);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+  }
+}
+
+// Mobile Menu
+.nav-mobile {
+  display: none;
+  background-color: $white;
+  border-top: 1px solid #eee;
+  padding: 20px 0;
+  animation: slideDown 0.3s ease;
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+
+    li {
+      padding: 0;
+
+      a {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: $text-dark;
+        font-weight: 500;
+        transition: $transition;
+        border-left: 4px solid transparent;
+
+        &:hover {
+          background-color: $light-bg;
+          color: $primary-color;
+        }
+
+        &.active {
+          background-color: $light-bg;
+          color: $primary-color;
+          border-left-color: $primary-color;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+// Animação slide down
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsividade Tablet
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-mobile {
+    display: block;
+  }
+
+  .navbar-brand .logo {
+    gap: 8px;
+
+    .logo-icon {
+      font-size: 24px;
+    }
+
+    .logo-text {
+      font-size: 18px;
+    }
+  }
+}
+
+// Responsividade Mobile
+@media (max-width: 480px) {
+  .navbar-content {
+    gap: 15px;
+  }
+
+  .navbar-brand .logo {
+    .logo-text {
+      display: none;
+    }
+
+    .logo-icon {
+      font-size: 24px;
+    }
+  }
+
+  .hamburger {
+    span {
+      width: 20px;
+      height: 2.5px;
+    }
+  }
+
+  .nav-mobile {
+    padding: 15px 0;
+
+    .mobile-menu {
+      li a {
+        padding: 12px 15px;
+        font-size: 14px;
+      }
+    }
+  }
+}

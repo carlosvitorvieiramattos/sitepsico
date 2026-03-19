@@ -1,0 +1,71 @@
+<!-- Seção de Apresentação -->
+<section class="sobre-hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Bem-vindo à minha jornada profissional</h1>
+      <p class="subtitle">Conheca minha história e minha dedicação ao bem-estar mental</p>
+    </div>
+  </div>
+</section>
+
+<!-- Seção Principal sobre a Profissional -->
+<section class="sobre-principal">
+  <div class="container">
+    <div class="sobre-grid">
+      <div class="sobre-texto">
+        <h2>{{ nomeProfissional }}</h2>
+        <p class="registro">{{ registroCRP }}</p>
+        <p class="especialidade">{{ especialidade }}</p>
+        
+        <div class="biografia">
+          <p>{{ biografia }}</p>
+        </div>
+
+        <div class="valores-section">
+          <h3>Meus Pilares Profissionais</h3>
+          <ul class="valores-list">
+            <li *ngFor="let valor of valores">
+              <span class="checkmark">✓</span>
+              {{ valor }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sobre-imagem">
+        <div class="image-placeholder">
+          <i class="ion-person-stalker"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção de Formação Acadêmica -->
+<section class="formacao">
+  <div class="container">
+    <h2>Formação Acadêmica</h2>
+    <p class="section-subtitle">Educação continuada é parte essencial da minha prática</p>
+    
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let formacao of formacoes">
+        <div class="timeline-marker">
+          <span class="ano">{{ formacao.ano }}</span>
+        </div>
+        <div class="timeline-content">
+          <h3>{{ formacao.titulo }}</h3>
+          <p>{{ formacao.instituicao }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Pronto para começar sua transformação?</h2>
+    <p>Agende uma sessão e conheça melhor meu trabalho</p>
+    <a href="/contato" class="cta-button">Agende uma Consulta</a>
+  </div>
+</section>

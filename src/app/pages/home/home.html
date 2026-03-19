@@ -1,0 +1,75 @@
+<!-- Seção Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Bem-vindo à Psicologia com Propósito</h1>
+    <p class="hero-subtitle">Transforme sua vida através da psicoterapia profissional e humanizada</p>
+    <button class="cta-button" (click)="scrollToContato()">Agende uma Consulta</button>
+  </div>
+</section>
+
+<!-- Seção de Diferenciais -->
+<section class="diferenciais">
+  <div class="container">
+    <h2>Por que me escolher?</h2>
+    <p class="section-subtitle">Conheça os diferenciais que tornam meu atendimento único</p>
+    
+    <div class="diferenciais-grid">
+      <div class="diferencial-card" *ngFor="let diferencial of diferenciais">
+        <div class="card-icon">
+          <i [class]="'ion-' + diferencial.icone"></i>
+        </div>
+        <h3>{{ diferencial.titulo }}</h3>
+        <p>{{ diferencial.descricao }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção de Sobre -->
+<section class="sobre-resumo">
+  <div class="container">
+    <h2>Sobre Mim</h2>
+    <p class="sobre-texto">
+      Sou uma psicóloga dedicada a ajudar pessoas a encontrarem equilibrio emocional e qualidade de vida.
+      Com formação em Psicologia Clínica e especialização em Terapia Cognitivo-Comportamental,
+      ofereço um espaço acolhedor para sua jornada de autoconhecimento.
+    </p>
+    <a routerLink="/sobre" class="link-button">Saiba mais sobre mim</a>
+  </div>
+</section>
+
+<!-- Seção de Serviços Destaque -->
+<section class="servicos-destaque">
+  <div class="container">
+    <h2>Serviços Disponíveis</h2>
+    <p class="section-subtitle">Oferecemos diferentes modalidades para atender suas necessidades</p>
+    
+    <div class="servicos-preview">
+      <div class="servico-item">
+        <h3>Psicoterapia Individual</h3>
+        <p>Espaço seguro para explorar seus desafios pessoais</p>
+        <small>Híbrido • 50 min</small>
+      </div>
+      <div class="servico-item">
+        <h3>Terapia de Casal</h3>
+        <p>Fortaleça seu relacionamento com comunicação efetiva</p>
+        <small>Presencial • Agendado</small>
+      </div>
+      <div class="servico-item">
+        <h3>Orientação Profissional</h3>
+        <p>Encontre seu caminho profissional ideal</p>
+        <small>Online • Consultoria</small>
+      </div>
+    </div>
+    <a routerLink="/servicos" class="link-button">Ver todos os serviços</a>
+  </div>
+</section>
+
+<!-- Seção de Agendamento -->
+<section id="agendamento" class="agendamento">
+  <div class="container">
+    <h2>Pronto para começar?</h2>
+    <p>Entre em contato e agende sua primeira sessão</p>
+    <a routerLink="/contato" class="cta-button">Agende Agora</a>
+  </div>
+</section>

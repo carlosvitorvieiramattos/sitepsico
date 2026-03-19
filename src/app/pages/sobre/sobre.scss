@@ -1,0 +1,337 @@
+// Variáveis
+$primary-color: #408A71;
+$secondary-color: #285A48;
+$light-bg: #B0E4CC;
+$text-dark: #091413;
+$text-light: #666;
+$border-radius: 12px;
+$transition: all 0.3s ease;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Seção Hero
+.sobre-hero {
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 44px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    opacity: 0.95;
+  }
+}
+
+// Seção Principal
+.sobre-principal {
+  padding: 80px 20px;
+  background-color: white;
+
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: $text-dark;
+    margin-bottom: 10px;
+  }
+
+  .registro {
+    color: $primary-color;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .especialidade {
+    color: $text-light;
+    font-style: italic;
+    margin-bottom: 30px;
+  }
+}
+
+// Grid de Sobre
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+// Texto
+.sobre-texto {
+  .biografia {
+    background-color: $light-bg;
+    padding: 20px;
+    border-left: 4px solid $primary-color;
+    border-radius: $border-radius;
+    margin: 30px 0;
+    line-height: 1.8;
+    color: $text-light;
+  }
+}
+
+// Seção Valores
+.valores-section {
+  margin-top: 40px;
+
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: $text-dark;
+    margin-bottom: 20px;
+  }
+
+  .valores-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 12px 0;
+      color: $text-light;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .checkmark {
+        color: $primary-color;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+// Seção Imagem
+.sobre-imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .image-placeholder {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 120px;
+    box-shadow: 0 10px 40px rgba($primary-color, 0.2);
+  }
+}
+
+// Seção Formação
+.formacao {
+  background-color: $light-bg;
+  padding: 80px 20px;
+  text-align: center;
+
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: $text-dark;
+    margin-bottom: 15px;
+  }
+
+  .section-subtitle {
+    color: $text-light;
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+}
+
+// Timeline
+.timeline {
+  position: relative;
+  padding: 20px 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: $primary-color;
+  }
+}
+
+.timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+
+  &:nth-child(odd) {
+    padding-right: 52%;
+    text-align: right;
+
+    .timeline-content {
+      margin-right: 20px;
+    }
+  }
+
+  &:nth-child(even) {
+    padding-left: 52%;
+    text-align: left;
+
+    .timeline-content {
+      margin-left: 20px;
+    }
+  }
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 3px solid $primary-color;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ano {
+    font-weight: bold;
+    color: $primary-color;
+    font-size: 12px;
+  }
+}
+
+.timeline-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+  h3 {
+    color: $text-dark;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: $text-light;
+    margin: 0;
+  }
+}
+
+// CTA Section
+.cta-section {
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.95;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: white;
+    color: $primary-color;
+    padding: 14px 32px;
+    border-radius: $border-radius;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: $transition;
+    text-decoration: none;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+// Responsividade
+@media (max-width: 768px) {
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .sobre-hero h1 {
+    font-size: 28px;
+  }
+
+  .timeline {
+    &::before {
+      left: 15px;
+    }
+  }
+
+  .timeline-item {
+    &:nth-child(odd),
+    &:nth-child(even) {
+      padding-left: 60px;
+      padding-right: 0;
+      text-align: left;
+
+      .timeline-content {
+        margin-left: 10px;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .timeline-marker {
+    left: 0;
+    transform: translateX(0);
+  }
+
+  .sobre-imagem .image-placeholder {
+    width: 250px;
+    height: 250px;
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre-principal,
+  .formacao,
+  .cta-section {
+    padding: 40px 20px;
+  }
+
+  .sobre-hero h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 24px !important;
+  }
+
+  .valores-section li {
+    gap: 10px;
+  }
+
+  .sobre-imagem .image-placeholder {
+    width: 200px;
+    height: 200px;
+    font-size: 60px;
+  }
+}

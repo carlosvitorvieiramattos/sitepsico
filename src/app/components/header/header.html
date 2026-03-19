@@ -1,0 +1,42 @@
+<header [class.scrolled]="isScrolled">
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <!-- Logo/Marca -->
+        <div class="navbar-brand">
+          <a routerLink="/home" class="logo">
+            <span class="logo-icon">Ψ</span>
+            <span class="logo-text">Psicologia</span>
+          </a>
+        </div>
+
+        <!-- Menu Desktop -->
+        <ul class="nav-menu">
+          <li *ngFor="let item of navItems">
+            <a [routerLink]="item.path" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+              {{ item.label }}
+            </a>
+          </li>
+        </ul>
+
+        <!-- Menu Mobile Toggle -->
+        <button class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div class="nav-mobile" *ngIf="isMenuOpen">
+      <ul class="mobile-menu">
+        <li *ngFor="let item of navItems">
+          <a [routerLink]="item.path" (click)="closeMenu()" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            {{ item.label }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

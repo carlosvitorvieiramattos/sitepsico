@@ -1,0 +1,127 @@
+<!-- Seção Hero -->
+<section class="contato-hero">
+  <div class="container">
+    <h1>Entre em Contato</h1>
+    <p class="subtitle">Ficarei feliz em responder suas dúvidas e agendar sua consulta</p>
+  </div>
+</section>
+
+<!-- Seção Principal de Contato -->
+<section class="contato-principal">
+  <div class="container">
+    <div class="contato-grid">
+      <!-- Formulário -->
+      <div class="contato-form">
+        <h2>Envie uma mensagem</h2>
+        
+        <form [formGroup]="contatoForm" (ngSubmit)="enviarMensagem()">
+          <div class="form-group">
+            <label for="nome">Nome Completo</label>
+            <input 
+              type="text" 
+              id="nome" 
+              formControlName="nome" 
+              placeholder="Seu nome"
+              required>
+            <span class="error" *ngIf="contatoForm.get('nome')?.hasError('required') && contatoForm.get('nome')?.touched">
+              Nome é obrigatório
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              formControlName="email" 
+              placeholder="seu.email@example.com"
+              required>
+            <span class="error" *ngIf="contatoForm.get('email')?.hasError('required') && contatoForm.get('email')?.touched">
+              Email é obrigatório
+            </span>
+            <span class="error" *ngIf="contatoForm.get('email')?.hasError('email') && contatoForm.get('email')?.touched">
+              Email inválido
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea 
+              id="mensagem" 
+              formControlName="mensagem" 
+              placeholder="Descreva sua dúvida ou necessidade..."
+              rows="6"
+              required></textarea>
+            <span class="error" *ngIf="contatoForm.get('mensagem')?.hasError('required') && contatoForm.get('mensagem')?.touched">
+              Mensagem é obrigatória
+            </span>
+            <span class="error" *ngIf="contatoForm.get('mensagem')?.hasError('minlength') && contatoForm.get('mensagem')?.touched">
+              Mensagem deve ter no mínimo 10 caracteres
+            </span>
+          </div>
+
+          <button type="submit" class="submit-button" [disabled]="!contatoForm.valid">
+            Enviar Mensagem
+          </button>
+        </form>
+      </div>
+
+      <!-- Informações de Contato -->
+      <div class="contato-info">
+        <h2>Informações de Contato</h2>
+        
+        <div class="info-item">
+          <h3>📞 Telefone</h3>
+          <p>(11) 99999-9999</p>
+          <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-link">Chamar no WhatsApp</a>
+        </div>
+
+        <div class="info-item">
+          <h3>📧 Email</h3>
+          <p><a href="mailto:contato@psicologa.com.br">contato@psicologa.com.br</a></p>
+        </div>
+
+        <div class="info-item">
+          <h3>📍 Localização</h3>
+          <p>Rua Exemplo, 123 - Sala 42<br/>São Paulo - SP<br/>CEP: 01234-567</p>
+        </div>
+
+        <div class="info-item">
+          <h3>🕐 Horário de Atendimento</h3>
+          <p>Segunda a Sexta: 08h00 - 19h00<br/>
+          Sábado: 09h00 - 13h00<br/>
+          Domingo: Fechado</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção de FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <h2>Perguntas Frequentes</h2>
+    
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>Como agendar uma consulta?</h3>
+        <p>Você pode agendar preenchendo o formulário ao lado, enviando um WhatsApp ou entrando em contato diretamente por email. Responde em até 24 horas.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Qual é o valor da consulta?</h3>
+        <p>Os valores variam conforme o tipo de serviço e modalidade. Envie uma mensagem para obter uma proposta personalizada.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Atendo online?</h3>
+        <p>Sim! Oferecemos atendimento presencial e online por videochamada, ambos com a mesma qualidade e eficácia.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Qual é o meu sigilo garantido?</h3>
+        <p>O sigilo profissional é absoluto, conforme mandatório pelo código de ética da psicologia. Seus dados nunca serão compartilhados.</p>
+      </div>
+    </div>
+  </div>
+</section>

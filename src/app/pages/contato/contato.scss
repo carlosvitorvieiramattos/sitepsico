@@ -1,0 +1,305 @@
+// Variáveis
+$primary-color: #408A71;
+$secondary-color: #285A48;
+$light-bg: #B0E4CC;
+$text-dark: #091413;
+$text-light: #666;
+$border-radius: 12px;
+$transition: all 0.3s ease;
+$error-color: #ef4444;
+$success-color: #22c55e;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Seção Hero
+.contato-hero {
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 44px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    opacity: 0.95;
+  }
+}
+
+// Seção Principal
+.contato-principal {
+  padding: 80px 20px;
+  background-color: white;
+
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: $text-dark;
+    margin-bottom: 30px;
+  }
+}
+
+// Grid de Contato
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+// Formulário
+.contato-form {
+  background-color: $light-bg;
+  padding: 40px;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+  form {
+    margin-top: 30px;
+  }
+}
+
+// Form Group
+.form-group {
+  margin-bottom: 25px;
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: $text-dark;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: $border-radius;
+    font-family: inherit;
+    font-size: 14px;
+    transition: $transition;
+    background-color: white;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      border-color: $error-color;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .error {
+    display: block;
+    color: $error-color;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+}
+
+// Botão de Envio
+.submit-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: white;
+  border: none;
+  border-radius: $border-radius;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba($primary-color, 0.3);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// Informações de Contato
+.contato-info {
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: $text-dark;
+    margin-bottom: 40px;
+  }
+}
+
+// Info Item
+.info-item {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-dark;
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: $text-light;
+    line-height: 1.6;
+    margin: 10px 0;
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      transition: $transition;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// WhatsApp Link
+.whatsapp-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #25d366;
+  color: white;
+  border-radius: $border-radius;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: $transition;
+
+  &:hover {
+    background-color: #20ba58;
+    transform: translateY(-2px);
+  }
+}
+
+// Seção FAQ
+.faq-section {
+  background-color: $light-bg;
+  padding: 80px 20px;
+  text-align: center;
+
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: $text-dark;
+    margin-bottom: 50px;
+  }
+}
+
+// Grid de FAQ
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+// FAQ Item
+.faq-item {
+  background-color: white;
+  padding: 30px;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: $text-dark;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: $text-light;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+// Responsividade
+@media (max-width: 768px) {
+  .contato-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contato-hero h1 {
+    font-size: 28px;
+  }
+
+  .contato-form {
+    padding: 30px 20px;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .contato-principal,
+  .faq-section {
+    padding: 40px 20px;
+  }
+
+  .contato-hero h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 24px !important;
+  }
+
+  .contato-form {
+    padding: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .info-item {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+  }
+}
