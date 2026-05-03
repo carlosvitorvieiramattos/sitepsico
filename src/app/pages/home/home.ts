@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -13,6 +13,7 @@ interface Diferencial {
   selector: 'app-home',
   standalone: true, // Padrão nas versões mais recentes
   imports: [CommonModule, RouterModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
@@ -21,7 +22,7 @@ export class HomeComponent implements OnInit {
   // Dados que serão renderizados no HTML
   public diferenciais: Diferencial[] = [
     {
-      icone: 'brain',
+      icone: 'book',
       titulo: 'Abordagem TCC',
       descricao: 'Foco em reestruturação cognitiva e mudanças comportamentais práticas.'
     },
@@ -31,7 +32,7 @@ export class HomeComponent implements OnInit {
       descricao: 'Ambiente seguro e livre de julgamentos para sua jornada de autodescoberta.'
     },
     {
-      icone: 'video',
+      icone: 'videocam',
       titulo: 'Atendimento Online',
       descricao: 'Sessões por videochamada com a mesma eficácia do presencial e mais conforto.'
     }

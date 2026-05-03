@@ -1,22 +1,33 @@
 <!-- Seção Hero -->
 <section class="hero">
-  <div class="hero-content">
-    <h1>Bem-vindo à Psicologia com Propósito</h1>
-    <p class="hero-subtitle">Transforme sua vida através da psicoterapia profissional e humanizada</p>
-    <button class="cta-button" (click)="scrollToContato()">Agende uma Consulta</button>
+  <div class="container hero-container">
+    <div class="hero-content">
+      <h1>Psicologia com Propósito</h1>
+      <p class="hero-subtitle">Transforme sua vida através da psicoterapia profissional e humanizada, em um ambiente seguro para o seu desenvolvimento.</p>
+      <div class="hero-actions">
+        <button class="cta-button" (click)="scrollToContato()">Agende uma Consulta</button>
+        <a routerLink="/sobre" class="link-button outline">Conheça a profissional</a>
+      </div>
+    </div>
+    <div class="hero-image-wrapper">
+      <img src="assets/images/office_detail.png" alt="Consultório de Psicologia" class="hero-image">
+      <div class="hero-backdrop"></div>
+    </div>
   </div>
 </section>
 
 <!-- Seção de Diferenciais -->
 <section class="diferenciais">
   <div class="container">
-    <h2>Por que me escolher?</h2>
-    <p class="section-subtitle">Conheça os diferenciais que tornam meu atendimento único</p>
+    <div class="section-header text-center">
+      <h2>Por que me escolher?</h2>
+      <p class="section-subtitle">Conheça os diferenciais que tornam meu atendimento único e acolhedor</p>
+    </div>
     
     <div class="diferenciais-grid">
-      <div class="diferencial-card" *ngFor="let diferencial of diferenciais">
+      <div class="diferencial-card glass-panel" *ngFor="let diferencial of diferenciais">
         <div class="card-icon">
-          <i [class]="'ion-' + diferencial.icone"></i>
+          <ion-icon [name]="diferencial.icone + '-outline'"></ion-icon>
         </div>
         <h3>{{ diferencial.titulo }}</h3>
         <p>{{ diferencial.descricao }}</p>
@@ -27,49 +38,62 @@
 
 <!-- Seção de Sobre -->
 <section class="sobre-resumo">
-  <div class="container">
-    <h2>Sobre Mim</h2>
-    <p class="sobre-texto">
-      Sou uma psicóloga dedicada a ajudar pessoas a encontrarem equilibrio emocional e qualidade de vida.
-      Com formação em Psicologia Clínica e especialização em Terapia Cognitivo-Comportamental,
-      ofereço um espaço acolhedor para sua jornada de autoconhecimento.
-    </p>
-    <a routerLink="/sobre" class="link-button">Saiba mais sobre mim</a>
+  <div class="container sobre-container">
+    <div class="sobre-image">
+       <img src="assets/images/office_detail.png" alt="Consultório acolhedor" class="portrait-img">
+    </div>
+    <div class="sobre-content">
+      <h2>Sobre Mim</h2>
+      <p class="sobre-texto">
+        Sou uma psicóloga dedicada a ajudar pessoas a encontrarem equilíbrio emocional e qualidade de vida.
+        Com formação em Psicologia Clínica e especialização em Terapia Cognitivo-Comportamental,
+        ofereço um espaço acolhedor para sua jornada de autoconhecimento.
+      </p>
+      <p class="sobre-texto">Acredito que cada pessoa carrega em si o potencial para transformar sua própria história quando encontra o suporte adequado.</p>
+      <a routerLink="/sobre" class="cta-button mt-3">Saiba mais sobre mim</a>
+    </div>
   </div>
 </section>
 
 <!-- Seção de Serviços Destaque -->
 <section class="servicos-destaque">
   <div class="container">
-    <h2>Serviços Disponíveis</h2>
-    <p class="section-subtitle">Oferecemos diferentes modalidades para atender suas necessidades</p>
+    <div class="section-header text-center">
+      <h2>Serviços Disponíveis</h2>
+      <p class="section-subtitle">Oferecemos diferentes modalidades para atender perfeitamente às suas necessidades atuais</p>
+    </div>
     
     <div class="servicos-preview">
       <div class="servico-item">
+        <div class="servico-icon">🛋️</div>
         <h3>Psicoterapia Individual</h3>
-        <p>Espaço seguro para explorar seus desafios pessoais</p>
-        <small>Híbrido • 50 min</small>
+        <p>Espaço seguro e totalmente confidencial para explorar seus desafios pessoais.</p>
+        <span class="servico-tag">Híbrido • 50 min</span>
       </div>
       <div class="servico-item">
+        <div class="servico-icon">🤝</div>
         <h3>Terapia de Casal</h3>
-        <p>Fortaleça seu relacionamento com comunicação efetiva</p>
-        <small>Presencial • Agendado</small>
+        <p>Fortaleça seu relacionamento com comunicação efetiva e empatia.</p>
+        <span class="servico-tag">Presencial • Agendado</span>
       </div>
       <div class="servico-item">
+        <div class="servico-icon">🎯</div>
         <h3>Orientação Profissional</h3>
-        <p>Encontre seu caminho profissional ideal</p>
-        <small>Online • Consultoria</small>
+        <p>Encontre seu caminho profissional ideal e desenvolva sua carreira.</p>
+        <span class="servico-tag">Online • Consultoria</span>
       </div>
     </div>
-    <a routerLink="/servicos" class="link-button">Ver todos os serviços</a>
+    <div class="text-center mt-4">
+      <a routerLink="/servicos" class="link-button">Ver todos os serviços completos</a>
+    </div>
   </div>
 </section>
 
 <!-- Seção de Agendamento -->
 <section id="agendamento" class="agendamento">
-  <div class="container">
-    <h2>Pronto para começar?</h2>
-    <p>Entre em contato e agende sua primeira sessão</p>
-    <a routerLink="/contato" class="cta-button">Agende Agora</a>
+  <div class="container agendamento-container glass-panel">
+    <h2>Pronto para dar o primeiro passo?</h2>
+    <p>Entre em contato hoje mesmo e agende sua primeira sessão de acolhimento.</p>
+    <a routerLink="/contato" class="cta-button">Agende Agora via WhatsApp</a>
   </div>
 </section>
