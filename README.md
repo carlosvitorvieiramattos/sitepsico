@@ -1,5 +1,7 @@
 # SitePsicologia
 
+[![Deploy Angular app to Pages](https://github.com/carlosvitorvieiramattos/sitepsico/actions/workflows/static.yml/badge.svg)](https://github.com/carlosvitorvieiramattos/sitepsico/actions/workflows/static.yml)
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
 
 ## Development server
