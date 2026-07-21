@@ -2,12 +2,18 @@
 name: Deploy Angular app to Pages
 
 on:
+  # Roda quando um push é feito para a branch `main`
   push:
     branches: ["main"]
+
+  # Permite que você rode este workflow manualmente pela aba Actions do GitHub
   workflow_dispatch:
 
+# Define permissões para o GITHUB_TOKEN para permitir o deploy no GitHub Pages
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
@@ -25,13 +31,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build project
-        run: npm run build -- --base-href /sitepsico/
+      - name: Build
+        run: npm run build -- --output-path=docs --base-href=/sitepsico/
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/site-psicologia/browser
-          publish_branch: gh-pages
-          force_orphan: true
+          path: './docs'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
