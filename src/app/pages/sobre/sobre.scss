@@ -30,6 +30,8 @@ $transition: all 0.3s ease;
   .subtitle {
     font-size: 18px;
     opacity: 0.95;
+    max-width: 720px;
+    margin: 0 auto;
   }
 }
 
@@ -125,8 +127,12 @@ $transition: all 0.3s ease;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 120px;
     box-shadow: 0 10px 40px rgba($primary-color, 0.2);
+  }
+
+  .image-placeholder ion-icon {
+    font-size: 8rem;
+    line-height: 1;
   }
 }
 

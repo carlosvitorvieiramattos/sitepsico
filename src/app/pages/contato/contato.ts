@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -8,7 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './contato.html',
-  styleUrl: './contato.scss'
+  styleUrl: './contato.scss',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ContatoComponent {
   contatoForm: FormGroup;

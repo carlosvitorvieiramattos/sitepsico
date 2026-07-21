@@ -18,7 +18,7 @@ $dark-text: #f3f4f6;
 
 // Footer
 .footer {
-  background: $light-bg;
+  background: linear-gradient(180deg, $light-bg 0%, #f3f7f4 100%);
   color: $text-dark;
   padding: 60px 20px 20px;
   margin-top: 80px;
@@ -130,6 +130,21 @@ $dark-text: #f3f4f6;
     justify-content: center;
     margin-bottom: 0;
   }
+}
+
+.footer-coluna h3 {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-coluna h3::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, $primary-color, $secondary-color);
 }
 
 // Redes Sociais

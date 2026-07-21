@@ -35,6 +35,7 @@ body {
   color: var(--text-dark);
   background-color: var(--light-bg);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 // Estilos globais de classe

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface Formacao {
@@ -12,7 +12,8 @@ interface Formacao {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './sobre.html',
-  styleUrl: './sobre.scss'
+  styleUrl: './sobre.scss',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SobreComponent implements OnInit {
 
