@@ -4,6 +4,7 @@ $secondary-color: #285A48;
 $light-bg: #B0E4CC;
 $text-dark: #091413;
 $text-light: #666;
+$text-white: #f5f9f7;
 $border-radius: 12px;
 $transition: all 0.3s ease;
 $error-color: #ef4444;
@@ -18,7 +19,7 @@ $success-color: #22c55e;
 // Seção Hero
 .contato-hero {
   background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
-  color: white;
+  color: $text-white;
   padding: 80px 20px;
   text-align: center;
 
@@ -27,10 +28,12 @@ $success-color: #22c55e;
     font-weight: bold;
     margin-bottom: 20px;
     line-height: 1.2;
+    color: white;
   }
 
   .subtitle {
     font-size: 18px;
+    color: white;
     opacity: 0.95;
   }
 }

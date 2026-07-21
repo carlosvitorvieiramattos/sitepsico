@@ -4,6 +4,7 @@ $secondary-color: #285A48;
 $light-bg: #B0E4CC;
 $text-dark: #091413;
 $text-light: #666;
+$text-white: #f5f9f7;
 $border-radius: 12px;
 $transition: all 0.3s ease;
 
@@ -16,7 +17,7 @@ $transition: all 0.3s ease;
 // Seção Hero
 .sobre-hero {
   background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
-  color: white;
+  color: $text-white;
   padding: 80px 20px;
   text-align: center;
 
@@ -25,10 +26,12 @@ $transition: all 0.3s ease;
     font-weight: bold;
     margin-bottom: 20px;
     line-height: 1.2;
+    color: white;
   }
 
   .subtitle {
     font-size: 18px;
+    color: white;
     opacity: 0.95;
     max-width: 720px;
     margin: 0 auto;
@@ -245,12 +248,14 @@ $transition: all 0.3s ease;
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 15px;
+    color: white !important;
   }
 
   p {
     font-size: 18px;
     margin-bottom: 30px;
     opacity: 0.95;
+    color: white !important;
   }
 
   .cta-button {

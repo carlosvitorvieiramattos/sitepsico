@@ -16,11 +16,11 @@ export class FooterComponent {
 
   // Dados da profissional
   public profissional = {
-    nome: 'Dra. Nome da Psicóloga',
-    crp: '06/123456',
-    local: 'Rua Exemplo, 123 - Sala 42, São Paulo - SP',
-    email: 'contato@psicologa.com.br',
-    whatsapp: '5511999999999'
+    nome: 'Psicóloga Miguelina B C Gonçalves Mattos',
+    crp: 'CRP - 18/04704',
+    local: 'Rua Eustácio de Siqueira, 173, Bairro Ribeirão do Lipa, Cuiabá - MT',
+    email: 'psicologamiguelina@outlook.com',
+    whatsapp: '5565996999264'
   };
 
   // Redes Sociais

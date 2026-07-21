@@ -8,7 +8,7 @@ interface Servico {
   descricaoCurta: string;
   detalhes: string[];
   publicoAlvo: string;
-  modalidade: 'Online' | 'Presencial' | 'Híbrido';
+  modalidade: string;
   imagemUrl: string;
 }
 
@@ -26,11 +26,11 @@ export class ServicosComponent implements OnInit {
     {
       id: 1,
       titulo: 'Psicoterapia Individual',
-      descricaoCurta: 'Espaço focado no autoconhecimento e resolução de conflitos internos.',
+      descricaoCurta: 'Espaço seguro e totalmente confidencial para explorar seus desafios pessoais.',
       detalhes: [
         'Sessões de 50 minutos',
-        'Abordagem Cognitivo-Comportamental',
-        'Tratamento de ansiedade e depressão'
+        'Abordagem Fenomenológica Existencial',
+        'Tratamento de crises existenciais: ansiedade, depressão e identidade em devir'
       ],
       publicoAlvo: 'Adultos e Adolescentes',
       modalidade: 'Híbrido',
@@ -39,28 +39,29 @@ export class ServicosComponent implements OnInit {
     {
       id: 2,
       titulo: 'Terapia de Casal',
-      descricaoCurta: 'Mediação de diálogos para fortalecer o vínculo e resolver crises.',
+      descricaoCurta: 'Fortaleça seu relacionamento com comunicação efetiva e empatia.',
       detalhes: [
         'Foco na comunicação assertiva',
         'Resolução de conflitos conjugais',
         'Alinhamento de objetivos de vida'
       ],
       publicoAlvo: 'Casais',
-      modalidade: 'Presencial',
+      modalidade: 'Híbrido',
       imagemUrl: 'assets/terapia-casal.jpg'
     },
     {
       id: 3,
-      titulo: 'Orientação Profissional',
-      descricaoCurta: 'Auxílio na escolha de carreira ou transição no mercado de trabalho.',
+      titulo: 'Terapia Familiar',
+      descricaoCurta: 'Tendo como foco o fenômeno, espaço relacional onde a comunicação e o afeto circulam ou ficam travados.',
       detalhes: [
-        'Testes de perfil comportamental',
-        'Planejamento de carreira',
-        'Identificação de habilidades'
+        'Foco no fenômeno no aqui-agora da experiência familiar',
+        'Olhar e entender como a família vivencia certas situações',
+        'Sofrimento como manifestação da dinâmica do grupo, não patologia individual',
+        'Crise familiar, angústia, sentido, liberdade, responsabilidade e abertura entre pares'
       ],
-      publicoAlvo: 'Estudantes e Profissionais',
-      modalidade: 'Online',
-      imagemUrl: 'assets/orientacao.jpg'
+      publicoAlvo: 'Famílias',
+      modalidade: 'Híbrido',
+      imagemUrl: 'assets/terapia-familiar.jpg'
     }
   ];
 

@@ -18,31 +18,34 @@ interface Formacao {
 export class SobreComponent implements OnInit {
 
   // Informações principais para exibição dinâmica
-  public nomeProfissional: string = 'Dra. Nome da Psicóloga';
-  public registroCRP: string = 'CRP 06/123456';
-  public especialidade: string = 'Psicóloga Clínica Especialista em TCC';
+  public nomeProfissional: string = 'Psicóloga Miguelina B C Gonçalves Mattos';
+  public registroCRP: string = 'CRP - 18/04704';
+  public especialidade: string = 'Psicóloga Clínica Especialista em Clínica Fenomenológica-Existencial';
 
   public biografia: string = `
-    Com mais de 10 anos de experiência, dedico minha carreira a auxiliar 
-    pessoas a navegarem por seus desafios emocionais. Minha prática é 
-    pautada na Ética, no Acolhimento e na Ciência.
+    Com anos de experiência, dedico minha carreira a auxiliar e acompanhar pessoas 
+    para ajudá-las a navegar por seus desafios emocionais com lucidez, dando sentido 
+    à vida. Minha prática é pautada na Ética, no Acolhimento e na Ciência. Sou orientada 
+    pela escuta qualificada e pela compreensão fenomenológica da experiência. Ofereço um 
+    espaço terapêutico de reflexão, elaboração emocional e desenvolvimento pessoal. 
+    Aqui você encontra um espaço de escuta, cuidado e acolhimento.
   `;
 
   public formacoes: Formacao[] = [
     {
-      ano: '2015',
+      ano: '',
       titulo: 'Graduação em Psicologia',
-      instituicao: 'Universidade Federal (UFXX)'
+      instituicao: 'Universidade de Cuiabá (UNIC)'
     },
     {
-      ano: '2017',
-      titulo: 'Especialização em Terapia Cognitivo-Comportamental',
-      instituicao: 'Instituto de Psicologia XPTO'
+      ano: '',
+      titulo: 'Especialização em Terapia Fenomenológica-Existencial',
+      instituicao: 'Clínica Fenomenológica da Infância, Adolescência e Famílias'
     },
     {
-      ano: '2020',
-      titulo: 'Mestrado em Saúde Mental',
-      instituicao: 'Universidade de São Paulo (USP)'
+      ano: '',
+      titulo: 'Formação em Clínica Ampliada Fenomenológica Existencial',
+      instituicao: 'Instituto Núcleo de Clínica Ampliada Fenomenológica Existencial (NUCAFE)'
     }
   ];
 
