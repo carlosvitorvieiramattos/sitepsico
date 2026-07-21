@@ -44,7 +44,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload the built Angular app
-          path: './dist/site-psicologia'
+          path: './dist/site-psicologia/browser'
 
       - name: Deploy to GitHub Pages
         id: deployment
