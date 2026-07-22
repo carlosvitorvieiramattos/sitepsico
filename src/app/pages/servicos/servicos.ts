@@ -33,7 +33,7 @@ export class ServicosComponent implements OnInit {
         'Tratamento de crises existenciais: ansiedade, depressão e identidade em devir'
       ],
       publicoAlvo: 'Adultos e Adolescentes',
-      modalidade: 'Híbrido',
+      modalidade: 'Presencial e Online 50 Minutos',
       imagemUrl: 'assets/terapia-individual.jpg'
     },
     {
@@ -46,7 +46,7 @@ export class ServicosComponent implements OnInit {
         'Alinhamento de objetivos de vida'
       ],
       publicoAlvo: 'Casais',
-      modalidade: 'Híbrido',
+      modalidade: 'Presencial e Online',
       imagemUrl: 'assets/terapia-casal.jpg'
     },
     {
@@ -60,7 +60,7 @@ export class ServicosComponent implements OnInit {
         'Crise familiar, angústia, sentido, liberdade, responsabilidade e abertura entre pares'
       ],
       publicoAlvo: 'Famílias',
-      modalidade: 'Híbrido',
+      modalidade: 'Presencial e Online',
       imagemUrl: 'assets/terapia-familiar.jpg'
     }
   ];
